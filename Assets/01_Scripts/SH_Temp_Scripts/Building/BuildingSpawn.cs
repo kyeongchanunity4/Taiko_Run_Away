@@ -10,7 +10,7 @@ public class BuildingSpawn : MonoBehaviour
     private Vector3 rightSpawnPoint = new Vector3(-35, 0, 8);
     private Vector3 buildingScale = new Vector3(0.3f, 0.3f, 0.3f);
     private float buildingRespawnTime = 5f;
-    private float curTime;
+    private float curTime = 5f;
 
     private void Awake()
     {

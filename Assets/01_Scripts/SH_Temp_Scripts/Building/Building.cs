@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Building : MonoBehaviour
 {
-    public float buildingMoveSpeed = 10f;
+    public float buildingMoveSpeed; // 방해물 오브젝트와 속도를 맞추기 위해 GameManager.cs에서 public 변수 선언하여 값 가져오기
     private float distanceMoved = 0f;
-    private float targetDistance = 100f;
+    private float targetDistance = 70f;
 
     private void OnEnable()
     {

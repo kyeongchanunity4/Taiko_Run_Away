@@ -22,10 +22,10 @@ public class ObjectPool : MonoBehaviour
         int prefabsIndex;
         foreach(var pool in pools)
         {
-            prefabsIndex = Random.Range(0, pool.prefabs.Length);
             Queue<GameObject> queue = new Queue<GameObject>();
             for(int i = 0; i < pool.size; i++)
             {
+                prefabsIndex = Random.Range(0, pool.prefabs.Length);
                 GameObject obj = Instantiate(pool.prefabs[prefabsIndex], transform);
                 obj.SetActive(false);
                 queue.Enqueue(obj);
