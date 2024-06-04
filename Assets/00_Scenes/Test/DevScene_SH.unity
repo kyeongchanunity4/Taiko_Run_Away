@@ -167,6 +167,10 @@ MonoBehaviour:
     - {fileID: 4207417130225988391, guid: bbed80806aa4d354289f88a077710f3d, type: 3}
     - {fileID: 5546755962283487609, guid: 755a2772d9dd422468aa40aa601faf64, type: 3}
     size: 20
+  - tag: SpecialImpediment
+    prefabs:
+    - {fileID: 7885567341883545842, guid: 3d0c946c774045340b63e6a071c9c5a0, type: 3}
+    size: 5
 --- !u!4 &100692606
 Transform:
   m_ObjectHideFlags: 0
