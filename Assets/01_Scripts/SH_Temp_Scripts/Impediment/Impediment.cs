@@ -11,6 +11,7 @@ public class Impediment : MonoBehaviour
     private void OnEnable()
     {
         distanceMoved = 0f;
+        impedimentMoveSpeed = GameManager.Instance.objectSpeed;
     }
 
     private void Update()

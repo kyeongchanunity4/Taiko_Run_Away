@@ -12,7 +12,7 @@ public class ImpedimentsSpawn : MonoBehaviour
         new Vector3(-25, 1, -3) 
     };
     private int maxObjectCount = 2;
-    private float impedimentRespawnTime = 5f;
+    private float impedimentRespawnTime;
     private float curTime;
 
     private void Awake()
@@ -22,6 +22,7 @@ public class ImpedimentsSpawn : MonoBehaviour
 
     private void Update()
     {
+        impedimentRespawnTime = GameManager.Instance.objectRespawn;
         curTime += Time.deltaTime;
         if(curTime > impedimentRespawnTime)
         {

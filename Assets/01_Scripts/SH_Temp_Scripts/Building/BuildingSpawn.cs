@@ -9,7 +9,7 @@ public class BuildingSpawn : MonoBehaviour
     private Vector3 leftSpawnPoint = new Vector3(-35, 0, -8);
     private Vector3 rightSpawnPoint = new Vector3(-35, 0, 8);
     private Vector3 buildingScale = new Vector3(0.3f, 0.3f, 0.3f);
-    private float buildingRespawnTime = 5f;
+    private float buildingRespawnTime;
     private float curTime = 5f;
 
     private void Awake()
@@ -19,6 +19,7 @@ public class BuildingSpawn : MonoBehaviour
 
     private void Update()
     {
+        buildingRespawnTime = GameManager.Instance.objectRespawn;
         curTime += Time.deltaTime;
         if(curTime > buildingRespawnTime)
         {

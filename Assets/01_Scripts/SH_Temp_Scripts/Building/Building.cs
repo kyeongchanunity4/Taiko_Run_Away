@@ -11,6 +11,7 @@ public class Building : MonoBehaviour
     private void OnEnable()
     {
         distanceMoved = 0f;
+        buildingMoveSpeed = GameManager.Instance.objectSpeed;
     }
 
     private void Update()
