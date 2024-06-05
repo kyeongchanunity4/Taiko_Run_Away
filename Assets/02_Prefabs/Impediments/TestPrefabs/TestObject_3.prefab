@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -5841427927602885268}
   m_Layer: 0
   m_Name: TestObject_3
-  m_TagString: Untagged
+  m_TagString: Impediment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

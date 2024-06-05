@@ -11,7 +11,7 @@ public class Score : MonoBehaviour
 
     private void Update()
     {
-        currentScore = CalculateScore();
+        //currentScore = CalculateScore();
         scoreText.text = currentScore.ToString("N0");
     }
 
@@ -33,5 +33,10 @@ public class Score : MonoBehaviour
         currentScore = score;
 
         return score;
+    }
+
+    public void AddScore(float value)
+    {
+        currentScore += value;
     }
 }

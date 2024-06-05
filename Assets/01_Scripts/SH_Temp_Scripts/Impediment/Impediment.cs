@@ -10,8 +10,8 @@ public interface IInteract
 public class Impediment : MonoBehaviour, IInteract
 {
     public float impedimentMoveSpeed;// 건물 오브젝트와 속도를 맞추기 위해 GameManager.cs에서 public 변수 선언하여 값 가져오기
-    private float distanceMoved = 0f;
-    private float targetDistance = 70f;
+    public float distanceMoved = 0f;
+    public float targetDistance = 70f;
 
     private void OnEnable()
     {
@@ -31,7 +31,7 @@ public class Impediment : MonoBehaviour, IInteract
         }
     }
 
-    public void OnInteraction(GameObject ob)
+    public virtual void OnInteraction(GameObject ob)
     {
         if(ob.TryGetComponent<PlayerScript>(out var player))
         {
