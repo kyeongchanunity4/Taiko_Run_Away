@@ -30,8 +30,10 @@ public class GameManager : MonoBehaviour
     public float objectRespawn = 3f;
     private float objectSpeedAtHighest = 20f;
     private float objectRespawnAtHighest = 1.5f;
+    private float objectSpeedAtLowest = 10f;
+    private float objectRespawnAtLowest = 3f;
     private float gameTime = 0;
-    private float difficultyControllTime = 30f;
+    private float difficultyControllTime = 10f;
 
     private void Awake()
     {
@@ -51,11 +53,24 @@ public class GameManager : MonoBehaviour
         gameTime += Time.deltaTime;
         if(gameTime > difficultyControllTime)
         {
-            if((objectSpeed + 2f) <= objectSpeedAtHighest)
-                objectSpeed += 2f;
-            if((objectRespawn - 0.5f) >= objectRespawnAtHighest)
-                objectRespawn -= 0.5f;
+            IncreaseDifficulty();
             gameTime = 0;
         }
+    }
+
+    public void IncreaseDifficulty()
+    {
+        if ((objectSpeed + 2f) <= objectSpeedAtHighest)
+            objectSpeed += 2f;
+        if ((objectRespawn - 0.5f) >= objectRespawnAtHighest)
+            objectRespawn -= 0.5f;
+    }
+
+    public void DecreaseDifficulty()
+    {
+        if ((objectSpeed - 2f) >= objectSpeedAtLowest)
+            objectSpeed -= 2f;
+        if ((objectRespawn + 0.5f) <= objectRespawnAtLowest)
+            objectRespawn += 0.5f;
     }
 }

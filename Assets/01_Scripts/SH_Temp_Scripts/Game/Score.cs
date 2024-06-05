@@ -32,7 +32,6 @@ public class Score : MonoBehaviour
         // 현재 점수를 업데이트
         currentScore = score;
 
-        Debug.Log(score);
         return score;
     }
 }
