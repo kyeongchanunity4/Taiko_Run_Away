@@ -35,6 +35,10 @@ public class GameManager : MonoBehaviour
     private float gameTime = 0;
     private float difficultyControllTime = 10f;
 
+    //퍼즈 패널과 엔드 패널 호출
+    public GameObject pausePanel;
+    public GameObject endPanel;
+
     private void Awake()
     {
         if (_instance == null)
@@ -46,6 +50,16 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject); // 기존 인스턴스가 있으면 이 오브젝트를 파괴합니다.
         }
+    }
+
+    private void Start()
+    {
+        // Retry할때 timeScale이 0일때 시작해버려서 추가함
+        Time.timeScale = 1.0f;
+
+        // 게임시작할때 일시정지 화면과 게임종료 화면을 비활성화
+        pausePanel.SetActive(false);
+        endPanel.SetActive(false);
     }
 
     private void Update()
