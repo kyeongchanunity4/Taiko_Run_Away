@@ -34,4 +34,7 @@ public class PlayerAnimation : MonoBehaviour
     {
         animator.SetTrigger("Slide");
     }
+
+    //게임오버되면
+    //animator.enabled = false;
 }
