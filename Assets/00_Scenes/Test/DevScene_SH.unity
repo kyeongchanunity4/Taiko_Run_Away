@@ -232,6 +232,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectSpeed: 10
   objectRespawn: 3
+  pausePanel: {fileID: 0}
+  endPanel: {fileID: 0}
 --- !u!114 &100692611
 MonoBehaviour:
   m_ObjectHideFlags: 0
