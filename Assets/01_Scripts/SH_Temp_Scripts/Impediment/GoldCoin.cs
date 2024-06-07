@@ -45,6 +45,7 @@ public class GoldCoin : Impediment, IInteract
     {
         if (ob.TryGetComponent<PlayerScript>(out var player))
         {
+            AudioManager.Instance.PlaySound(audioSource);
             Score score = player.GetComponent<Score>();
             score.AddScore(scoreValue);
             gameObject.SetActive(false);
