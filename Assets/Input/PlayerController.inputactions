@@ -62,7 +62,7 @@
                     "name": "",
                     "id": "d942243c-acee-4796-bf6e-215b0fc09612",
                     "path": "<Keyboard>/w",
-                    "interactions": "",
+                    "interactions": "Tap",
                     "processors": "",
                     "groups": "",
                     "action": "Jump",
