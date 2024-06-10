@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -7055641734702703268}
   - component: {fileID: 2128972265443332390}
   - component: {fileID: -9002008709985044492}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PirateCoin (Brass)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,11 +102,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -127844609115117539, guid: 5d0dbe9cd045eb6458b6aa0a6ffc0235, type: 3}
 --- !u!114 &-7055641734702703268

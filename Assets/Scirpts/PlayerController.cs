@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody rigidbody;
 
+    private bool isJumping;
+
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody>();
@@ -38,14 +40,14 @@ public class PlayerController : MonoBehaviour
             z = -3.0f;
         }
 
-        if (y < 1.49f)
-        {
-            y = 1.49f;
-        }
-        else if (y > 4.0f)
-        {
-            y = 4.0f;
-        }
+        //if (y < 1.5f && isJumping)
+        //{
+        //    isJumping = false;
+        //}
+        //else if (y > 4.0f)
+        //{
+        //    y = 4.0f;
+        //}
 
         transform.position = new Vector3(x, y, z);
     }
@@ -69,8 +71,9 @@ public class PlayerController : MonoBehaviour
 
     public void OnJumpInput(InputAction.CallbackContext context)
     {
-        if (context.phase == InputActionPhase.Started)
+        if (context.phase == InputActionPhase.Started && !isJumping)
         {
+            isJumping = true;
             rigidbody.AddForce(Vector2.up * jumpForce, ForceMode.Impulse);
         }
     }
@@ -83,6 +86,15 @@ public class PlayerController : MonoBehaviour
 
         rigidbody.velocity = dir;
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Ground")
+        {
+            isJumping = false;
+        }
+    }
+
 
     bool IsGrounded()
     {
