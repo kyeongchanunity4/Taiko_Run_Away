@@ -12,10 +12,12 @@ public class PlayerController : MonoBehaviour
     public LayerMask groundLayerMask;
 
     private Rigidbody rigidbody;
+    private Animator animator;
 
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody>();
+        animator = GetComponent<Animator>();
     }
 
     void Start()
@@ -72,6 +74,7 @@ public class PlayerController : MonoBehaviour
         if (context.phase == InputActionPhase.Started)
         {
             rigidbody.AddForce(Vector2.up * jumpForce, ForceMode.Impulse);
+            animator.SetBool("isJump", true);
         }
     }
 
@@ -82,6 +85,7 @@ public class PlayerController : MonoBehaviour
         dir.y = rigidbody.velocity.y;
 
         rigidbody.velocity = dir;
+        animator.SetBool("isJump", false);
     }
 
     bool IsGrounded()
