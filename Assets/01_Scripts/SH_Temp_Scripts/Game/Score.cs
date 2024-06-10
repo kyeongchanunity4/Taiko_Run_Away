@@ -6,8 +6,16 @@ using UnityEngine;
 public class Score : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private TextMeshProUGUI scoreText_EndPanel;
+    [SerializeField] private TextMeshProUGUI bestScoreText_EndPanel;
+
     private float currentScore;
-    // 최고 점수 넣는다면 여기에
+    private float bestScore;
+
+    private void Awake()
+    {
+        bestScore = PlayerPrefs.GetFloat("BestScore", 0.0f);
+    }
 
     private void Update()
     {
@@ -38,5 +46,20 @@ public class Score : MonoBehaviour
     public void AddScore(float value)
     {
         currentScore += value;
+    }
+
+    public void SetEndPanelScore()
+    {
+        scoreText_EndPanel.text = currentScore.ToString("N0");
+        if (currentScore >= bestScore)
+        {
+            bestScoreText_EndPanel.text = currentScore.ToString("N0");
+            bestScore = currentScore;
+            PlayerPrefs.SetFloat("BestScore", bestScore);
+        }
+        else
+        {
+            bestScoreText_EndPanel.text = bestScore.ToString("N0");
+        }
     }
 }

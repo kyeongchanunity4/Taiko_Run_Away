@@ -16,8 +16,11 @@ public class Condition : MonoBehaviour
     public GameObject pauseBtn;
     public GameObject endPanel;
 
+    public Score score;
+
     private void Start()
     {
+        score = GetComponent<Score>();
         startValue = maxValue;
         curValue = startValue;
 
@@ -36,6 +39,7 @@ public class Condition : MonoBehaviour
             Time.timeScale = 0.0f;
             pauseBtn.SetActive(false);
             endPanel.SetActive(true);
+            score.SetEndPanelScore();
         }
     }
 
