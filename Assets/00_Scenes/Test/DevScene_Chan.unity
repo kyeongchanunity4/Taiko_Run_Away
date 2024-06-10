@@ -239,8 +239,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectSpeed: 10
   objectRespawn: 3
-  pausePanel: {fileID: 0}
-  endPanel: {fileID: 0}
+  pausePanel: {fileID: 1841666417}
+  endPanel: {fileID: 251087352}
 --- !u!1 &147614871
 GameObject:
   m_ObjectHideFlags: 0
