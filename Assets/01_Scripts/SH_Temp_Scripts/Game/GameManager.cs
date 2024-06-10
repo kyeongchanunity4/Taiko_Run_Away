@@ -50,6 +50,9 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject); // 기존 인스턴스가 있으면 이 오브젝트를 파괴합니다.
         }
+
+        //프레임 조정
+        Application.targetFrameRate = 60;
     }
 
     private void Start()
