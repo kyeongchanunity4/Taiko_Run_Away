@@ -37,6 +37,16 @@ public class PlayerController : MonoBehaviour
         {
             z = -3.0f;
         }
+
+        if (y < 1.49f)
+        {
+            y = 1.49f;
+        }
+        else if (y > 4.0f)
+        {
+            y = 4.0f;
+        }
+
         transform.position = new Vector3(x, y, z);
     }
 
@@ -59,7 +69,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnJumpInput(InputAction.CallbackContext context)
     {
-        if (context.phase == InputActionPhase.Started && IsGrounded())
+        if (context.phase == InputActionPhase.Started)
         {
             rigidbody.AddForce(Vector2.up * jumpForce, ForceMode.Impulse);
         }

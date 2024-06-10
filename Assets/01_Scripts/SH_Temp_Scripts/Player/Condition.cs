@@ -12,6 +12,10 @@ public class Condition : MonoBehaviour
     public Transform hpContainer;
     private List<GameObject> hpImages = new List<GameObject>();
 
+    //엔드 패널
+    public GameObject pauseBtn;
+    public GameObject endPanel;
+
     private void Start()
     {
         startValue = maxValue;
@@ -21,6 +25,17 @@ public class Condition : MonoBehaviour
         {
             GameObject healthImage = Instantiate(hpImagePrefab, hpContainer);
             hpImages.Add(healthImage);
+        }
+    }
+
+    private void Update()
+    {
+        //라이프가 전부 깍였을 시 게임 종료
+        if (curValue == 0)
+        {
+            Time.timeScale = 0.0f;
+            pauseBtn.SetActive(false);
+            endPanel.SetActive(true);
         }
     }
 
