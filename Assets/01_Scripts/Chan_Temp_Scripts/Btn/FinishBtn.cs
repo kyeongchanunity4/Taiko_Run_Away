@@ -9,6 +9,7 @@ public class FinishBtn : MonoBehaviour
     public void Finish()
     {
         Time.timeScale = 0.0f;
+        Score.instance.SetEndPanelScore();
         pausePanel.SetActive(false);
         endPanel.SetActive(true);
     }

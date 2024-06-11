@@ -13,9 +13,12 @@ public class Score : MonoBehaviour
     private float currentScore;
     private float bestScore;
 
+    public static Score instance;
+
     private void Awake()
     {
         bestScore = PlayerPrefs.GetFloat("BestScore", 0.0f);
+        instance = this;
     }
 
     private void Update()
