@@ -37,8 +37,11 @@
   - 게임 스토리 버튼을 누르면 게임 스토리가 뜨고 그 아래 게임 설명 버튼 위치
   - 게임 설명 버튼을 누르면 조작법 설명 (W - 점프, A/S - 좌우 이동)
   - 게임 시작 버튼을 누르면 게임 플레이 화면으로 이동
+
 📘 [시작 버튼 스크립트](https://github.com/kyeongchanunity4/Taiko_Run_Away/blob/main/Assets/01_Scripts/Chan_Temp_Scripts/Btn/GameStartBtn.cs)
+
 📘 [시작 화면 스크립트](https://github.com/kyeongchanunity4/Taiko_Run_Away/blob/main/Assets/01_Scripts/Chan_Temp_Scripts/StartManager.cs)
+
 📘 [시작 화면 버튼 관리 스크립트](https://github.com/kyeongchanunity4/Taiko_Run_Away/blob/main/Assets/01_Scripts/Chan_Temp_Scripts/Btn/VariousBtn.cs)
 
 - 게임 플레이 화면
@@ -50,14 +53,25 @@
   - End Panel 최고 점수와 현재 점수 표시
   - Retry 버튼 누르면 게임 재시작
   - Title 버튼 누르면 타이틀(게임 시작 화면)로 이동
+
 📙 [게임 매니저](https://github.com/kyeongchanunity4/Taiko_Run_Away/blob/main/Assets/01_Scripts/SH_Temp_Scripts/Game/GameManager.cs)
+
 📙 [오디오 매니저](https://github.com/kyeongchanunity4/Taiko_Run_Away/blob/main/Assets/01_Scripts/SH_Temp_Scripts/Game/AudioManager.cs)
+
 📙 [점수 관리](https://github.com/kyeongchanunity4/Taiko_Run_Away/blob/main/Assets/01_Scripts/SH_Temp_Scripts/Game/Score.cs)
+
 📙 [빌딩](https://github.com/kyeongchanunity4/Taiko_Run_Away/tree/main/Assets/01_Scripts/SH_Temp_Scripts/Building)
+
 📙 [코인](https://github.com/kyeongchanunity4/Taiko_Run_Away/tree/main/Assets/01_Scripts/SH_Temp_Scripts/Impediment)
+
 📙 [플레이어 상태](https://github.com/kyeongchanunity4/Taiko_Run_Away/tree/main/Assets/01_Scripts/SH_Temp_Scripts/Player)
+
 📙 [플레이어 움직임](https://github.com/kyeongchanunity4/Taiko_Run_Away/tree/main/Assets/Scirpts)
+
 📙 [종료 버튼](https://github.com/kyeongchanunity4/Taiko_Run_Away/blob/main/Assets/01_Scripts/Chan_Temp_Scripts/Btn/FinishBtn.cs)
+
 📙 [일시 정지 버튼](https://github.com/kyeongchanunity4/Taiko_Run_Away/blob/main/Assets/01_Scripts/Chan_Temp_Scripts/Btn/PauseBtn.cs)
+
 📙 [다시 시작 버튼](https://github.com/kyeongchanunity4/Taiko_Run_Away/blob/main/Assets/01_Scripts/Chan_Temp_Scripts/Btn/RetryBtn.cs)
+
 📙 [타이틀 버튼](https://github.com/kyeongchanunity4/Taiko_Run_Away/blob/main/Assets/01_Scripts/Chan_Temp_Scripts/Btn/TitleBtn.cs)
