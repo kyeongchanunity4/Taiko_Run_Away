@@ -6,6 +6,8 @@ public class StartManager : MonoBehaviour
     public GameObject gameStoryBtn;
     public GameObject explainBtn;
     public GameObject gameStartBtn;
+    public GameObject gameStoryPanel;
+    public GameObject explainPanel;
 
     private void Start()
     {
@@ -13,5 +15,7 @@ public class StartManager : MonoBehaviour
         gameStoryBtn.SetActive(true);
         explainBtn.SetActive(true);
         gameStartBtn.SetActive(true);
+        gameStoryPanel.SetActive(false);
+        explainPanel.SetActive(false);
     }
 }

@@ -8,6 +8,7 @@ public class Score : MonoBehaviour
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private TextMeshProUGUI scoreText_EndPanel;
     [SerializeField] private TextMeshProUGUI bestScoreText_EndPanel;
+    [SerializeField] private TextMeshProUGUI scoreText_PausePanel;
 
     private float currentScore;
     private float bestScore;
@@ -21,6 +22,7 @@ public class Score : MonoBehaviour
     {
         //currentScore = CalculateScore();
         scoreText.text = currentScore.ToString("N0");
+        scoreText_PausePanel.text = currentScore.ToString("N0");
     }
 
     private float CalculateScore()
